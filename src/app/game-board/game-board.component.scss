@@ -1,0 +1,20 @@
+:host {
+  .table {
+    border: 5px solid #819b84;
+    .row {
+      display: flex;
+      justify-content: center;
+      .cell {
+        width: 17px;
+        height: 17px;
+        border: 1px solid rgb(0, 0, 0);
+        background-color: #819b84;
+        box-sizing: border-box;
+
+        &.live {
+          background-color: gold;
+        }
+      }
+    }
+  }
+}

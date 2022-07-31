@@ -1,0 +1,30 @@
+<div class="control-panel">
+  <div class="jenerations">
+    <div>{{ generations$ | async }}</div>
+    <span class="material-icons">numbers</span>
+  </div>
+  <button (click)="nextGeneration()">
+    <span class="material-icons">skip_next</span>
+  </button>
+  <div class="play-btn">
+    <button (click)="togglePlayState()" *ngIf="!(playState$ | async)">
+      <span class="material-icons">play_arrow</span>
+    </button>
+    <button (click)="togglePlayState()" *ngIf="playState$ | async">
+      <span class="material-icons">pause</span>
+    </button>
+  </div>
+  <button (click)="restart()">
+    <span class="material-icons">clear</span>
+  </button>
+  <div class="speed">
+    <span class="material-icons">speed</span>
+    <input
+      type="range"
+      min="10"
+      max="700"
+      [value]="speed$ | async"
+      (change)="changeSpeed($event)"
+    />
+  </div>
+</div>

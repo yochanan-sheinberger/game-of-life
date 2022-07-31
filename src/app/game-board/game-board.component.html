@@ -1,0 +1,10 @@
+<div class="table">
+  <div class="row" *ngFor="let row of table$ | async; let x = index">
+    <div
+      class="cell"
+      *ngFor="let cell of row; let y = index"
+      [ngClass]="cell"
+      (click)="toggleCell(x, y)"
+    ></div>
+  </div>
+</div>

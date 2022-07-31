@@ -1,0 +1,62 @@
+.control-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 100px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+
+  .jenerations {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 75px 30px;
+    text-align: left;
+
+    >span {
+      display: block;
+      font-size: 30px;
+      line-height: 2.5rem;
+      text-align: right;
+    }
+  }
+
+  .play-btn {
+    button {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .speed {
+    display: grid;
+    max-width: 150px;
+    span {
+      font-size: 40px;
+    }
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    background-color: #135364;
+    border: none;
+    color: #fff;
+    box-shadow: 0px 0px 4px 0px white;
+    cursor: pointer;
+
+    &:active {
+      box-shadow: 0px 0px 2px 0px white;
+    }
+  }
+}

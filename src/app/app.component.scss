@@ -1,0 +1,19 @@
+:host {
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    .cell {
+      width: 17px;
+      height: 17px;
+      border: 1px solid black;
+      background-color: aqua;
+      box-sizing: border-box;
+  
+      &.live {
+        background-color: gold;
+      }
+    }
+  }
+}
+
